@@ -218,7 +218,6 @@ html,body
 	padding: 30px 0 5px 0;
 	display flex;
 	border-bottom: 3px solid #63072b;
-
 }
 #row-1
 {
@@ -227,6 +226,7 @@ html,body
 .logo-navigation img
 {
 	max-width: 100%;
+	position: relative;
 }
 .main-manu
 {
@@ -451,13 +451,25 @@ sub-manu ul li:last-child a .btn
 	border-bottom: 1px solid #666;
 	width: 240px;
 }
-
+.hamber-bar
+{
+	display: none;
+	width: 50px;
+	height: 30px;
+	border: 3px solid black;
+}
 /*-----media-navigation----*/
 
 @media (max-width: 767px)
 {
 	.sub-manu{
-		display none;
+		display: none;
+	}
+	.hamber-bar{
+		display: block;
+		position: absolute;
+		right: 30px;
+		top: 40px;
 	}
 }
 
@@ -818,9 +830,9 @@ more li a:hover:after
 {
 	width: 100%;
 }
-.recent-project .col-md-3
+.recent-project .col-lg-3 
 {
-	padding: 10px;
+	padding: 8px 8px;
 }
 .recent-project h4
 {
