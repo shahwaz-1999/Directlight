@@ -216,7 +216,6 @@ html,body
 	width: 100%;
 	height: 100%;
 	padding: 30px 0 5px 0;
-	display flex;
 	border-bottom: 3px solid #63072b;
 }
 #row-1
@@ -248,18 +247,12 @@ html,body
 .sub-manu ul
 {
 	list-style: none;
-	float right;
 }
 .sub-manu ul li
 {
 	display: inline-block;
-	float left;
 	padding-top: 45px;
 	margin: 30px 0 0 35px;
-}
-sub-manu ul li:hover
-{
-	background-color: grey;
 }
 .sub-manu ul li a
 {
@@ -304,13 +297,9 @@ sub-manu ul li:hover
 	opacity: 1;
 	width: 100%;
 }
-arrow:after
+.arrow
 {
-	content: '\f140';
-  font-family: dashicons;
-  font-weight: normal;
   margin: 0 0 0 6px;
-  vertical-align: top;
 }
 #icon-1
 {
@@ -361,10 +350,6 @@ arrow:after
   background-size: 30px 30px;
   background-repeat: no-repeat;
 }
-sub-manu ul li:last-child a .btn
-{
-	padding-top: 0px;
-}
 .middle
 {
 	border: 4px solid #900c3f;
@@ -402,7 +387,6 @@ sub-manu ul li:last-child a .btn
 	display: block;
 	padding: 0 0 0 15px;
 	margin: 0;
-	position relative;
 }
 .sub-manu ul li .b .z ul li a
 {
@@ -454,23 +438,75 @@ sub-manu ul li:last-child a .btn
 .hamber-bar
 {
 	display: none;
-	width: 50px;
+	width: 40px;
 	height: 30px;
-	border: 3px solid black;
 }
+
 /*-----media-navigation----*/
+
 
 @media (max-width: 767px)
 {
+	.main-manu{
+		padding-top: 8px;
+	}
 	.sub-manu{
 		display: none;
+		text-align: left;
+		background: #222;
 	}
+	.sub-manu ul li{
+	  display: block;
+	  padding: 15px 0 0 20px;
+	  margin: 0;
+  }
+  .sub-manu ul .active a{
+	  color: #f2c500;
+  }
+  .sub-manu ul li a{
+	  line-height: 50px;
+	  color: #fff;
+    padding-top: 0;
+  }
+    .sub-manu ul li a:hover{
+    color: #f2c500;
+  }
+  #icon-1{
+  	background-image: none;
+  }
+  #icon-2{
+  	background-image: none;
+  }
+  #icon-3{
+  	background-image: none;
+  }
+  #icon-4{
+  	background-image: none;
+  }
+  #icon-5{
+  	background-image: none;
+  }
+  #icon-6{
+  	background-image: none;
+  }
 	.hamber-bar{
 		display: block;
 		position: absolute;
 		right: 30px;
 		top: 40px;
+		background-image: url(image/line.png);
+		background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 	}
+	.sub-manu ul li .b .z{
+		display: block;
+	}
+}
+
+@media (min-width: 768px)
+{
+	.sub-manu{display: block !important;}
 }
 
  /*-------Popup--------*/
@@ -560,87 +596,8 @@ sub-manu ul li:last-child a .btn
 	background: #009bbf;
 }
 
-/*.popup input
-{
-	width: 40%;
-	padding: 20px 0 20px 15px;
-	border: none;
-	outline: none;
-}
-.popup button
-{
-	padding: 31px 40px;
-}*/
+/*------Light-bulb-main------*/
 
-/*------------light-bulb-images------------*/
-/*.light-01-main
-{
-	background: #fdf8e4;
-	width: 100%;
-	height: auto;
-	padding: 40px 0;
-	border: 5px solid #000;
-}
-.light-01-main .col-md-3
-{
-	border: 2px solid blue;
-	background: #fff;
-}
-.light-direct-1
-{
-	width: 100%;
-	min-height: 420px;
-	border: 2px solid green;
-}
-.light-direct-1 img
-{
-	width: 100%;
-	height: 100%;
-	display: block;
-	padding: 20px;
-}
-.light-direct-1 a
-{
-	text-decoration: none;
-}
-.light-direct-1 h3
-{
-	font-size: 18px;
-	text-align: center;
-	color: #000;
-}
-.more
-{
-	list-style: none;
-	padding-top: 20px;
-	padding-bottom: 25px;
-	text-align: center;
-}
-.more li
-{
-	width 49%;
-	display: inline-block;
-	margin: 1%;
-}
-.more li a
-{
-	text-decoration: none;
-	color: #fff;
-	padding: 8px 20px;
-	font-size: 16px;
-	font-weight: 600;
-	font-family: 'Roboto Condensed', sans-serif;
-	position: relative;
-	display: block;
-	background: #900c3f;
-	transition: .5s;
-}
-.more li a:hover
-{
-	color: #fff;
-	background: #333;
-}
-*/
 .light-bulb-main
 {
 	width: 100%;
@@ -740,44 +697,6 @@ sub-manu ul li:last-child a .btn
 }
 
 
-more li a:before
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	border-top: 2px solid #63072b;
-	border-bottom: 2px solid #63072b;
-	width: 100%;
-	height: 100%;
-	display: block;
-	transform: scaleY(1.5);
-	transition: .5s;
-	opacity: 0;
-	z-index: 1;
-}
-more li a:hover:before
-{
-	transform: scaleY(1.3);
-	opacity: 1;
-}
-more li a:after
-{
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	transform: scale(0);
-	background: #63072b;
-	transition: .5s;
-	z-index: ;
-}
-more li a:hover:after
-{
-	transform: scale(1);
-}
 
 /*------about-us-box------*/
 
@@ -1156,11 +1075,6 @@ more li a:hover:after
 	background: #000;
 }
 
-news input
-{
-	width: 100%;
-}
-
 /*-------------footer-main-------*/
 
 .footer-main
@@ -1444,4 +1358,3 @@ news input
 	.develop h5{
 		text-align: center;
 	}
-}
