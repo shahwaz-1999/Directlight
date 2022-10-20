@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Direct-Light-solution</title>
 	<link rel="stylesheet" href="css/css/bootstrap.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
 	<link rel="stylesheet" href="css/D-style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -66,20 +66,22 @@
 
 <div class="logo-navigation">
 <div class="row" id="row-1">
-	<div class="col-lg-3 col-md-3 col-sm-4  col-12">
+	<div class="col-lg-3 col-md-4 col-12">
+		<div class="hamber-bar"></div>
 		<a href="">
 			<img src="css/image/logo-light.png">
 		</a>
 	</div>
-	<div class="col-lg-9 col-md-9 col-sm-8  col-12">
+	<div class="col-lg-9 col-md-8 col-12">
+		
 		<div class="main-manu">
 			<div class="sub-manu">
 				<ul>
-					<li><a href="#" id="icon-1" class="free">home</a></li>
+					<li class="active"><a href="#" id="icon-1" class="free">home</a></li>
 					<li><a href="#" id="icon-2">about</a></li>
 					<li>
 					 <a href="" id="icon-3">products
-						<span class="arrow"></span>
+						<span class="arrow"><i class="fa-solid fa-chevron-down"></i></span>
 					 </a>
 
 
@@ -293,10 +295,10 @@
 <div class="about-main-1">
 	<div class="container">
 	<div class="row">
-		<div class="col-lg-7  col-12">
+		<div class="col-lg-7 col-md-7 col-12">
 			<a href=""><img src="css/image/direct-img.jpg"></a>
 		</div>
-		<div class="col-lg-5 col-12">
+		<div class="col-lg-5 col-md-5 col-12">
 			<h4 class="about-1">About Us</h4>
             <h2>Who We Are</h2>
             <p>With over twenty-years of lighting experience, we have all your lighting needs covered. With ever-evolving technology and changing times, we bring the most efficient and eco-friendly lighting to our customers.</p>
@@ -314,7 +316,7 @@
     	<h2>Projects</h2>
     	<div class="container-fluid">
     	 <div class="row">
-    		 <div class="col-lg-3 col-sm-6">
+    		 <div class="col-lg-3 col-sm-6 col-12">
     			<div class="first-img">
     				<a href="">
     					<img src="css/image/pro.jpg">
@@ -324,7 +326,7 @@
     			    </a>
     		  </div>
     		 </div>
-         <div class="col-lg-3 col-sm-6">
+         <div class="col-lg-3 col-sm-6 col-12">
     			<div class="first-img">
     				<a href="">
     					<img src="css/image/pro-1.jpg">
@@ -334,7 +336,7 @@
     			    </a>
     		    </div>
     		  </div>
-    		 <div class="col-lg-3 col-sm-6">
+    		 <div class="col-lg-3 col-sm-6 col-12">
     			<div class="first-img">
     				<a href="">
     					<img src="css/image/pro-2.jpg">
@@ -344,7 +346,7 @@
     			    </a>
     		    </div>
     		  </div>
-    		 <div class="col-lg-3 col-sm-6">   		
+    		 <div class="col-lg-3 col-sm-6 col-12">   		
     			<div class="first-img">
     				<a href="">
     					<img src="css/image/pro-3.jpg">
@@ -631,6 +633,7 @@
      </div>
 
 
+
 		
 
 	<!--------last form-------->
@@ -698,5 +701,14 @@ $(document).ready(function(){
   });
 });
 </script>
+
+<script>
+	$(document).ready(function(){
+		$(".hamber-bar").click(function(){
+			$(".sub-manu").toggle();
+		});
+	});
+</script>
+
 </body>
 </html>
