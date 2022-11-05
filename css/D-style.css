@@ -224,7 +224,7 @@ html,body
 }
 .logo-navigation img
 {
-	max-width: 100%;
+	max-width: 87%;
 	position: relative;
 }
 .main-manu
@@ -496,8 +496,9 @@ html,body
 		top: 40px;
 		background-image: url(image/line.png);
 		background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+                background-repeat: no-repeat;
+                background-size: cover;
+		cursor:pointer;
 	}
 	.sub-manu ul li .b .z{
 		display: block;
